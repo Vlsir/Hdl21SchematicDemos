@@ -1,6 +1,15 @@
 
 # Hdl21 Schematic Demos
 
+Use this schematic -- 
+
+![](./hdl21schematicdemos/inverter.sch.svg)
+
+-- yes that *is* the schematic - in some Hdl21 python generators & simulations.
+
+
+## Installation & Usage
+
 * Get the [Poetry](https://python-poetry.org/docs/) package manager for Python.
 * `poetry install`
 * `pytest --verbose` should produce something like: 
