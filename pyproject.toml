@@ -1,0 +1,20 @@
+[tool.poetry]
+authors = ["Dan Fritchman <dan@fritch.mn>"]
+description = ""
+name = "Hdl21SchematicDemos"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+# Project Dependencies
+hdl21 = "^2.0.0"
+hdl21schematicimporter = "^1.0.dev0"
+sky130-hdl21 = "^2.0"
+
+[tool.poetry.dev-dependencies]
+black = "22.6.0"
+pytest = "7.1.2"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
