@@ -10,9 +10,8 @@ Use this schematic --
 
 ## Installation & Usage
 
-* `pip install -e ".[dev]"` to install the package and its dependencies.
-  * Or get [Poetry](https://python-poetry.org/docs/) and run `poetry install`.
-* `pytest --verbose` should produce something like: 
+* `pip install -e ".[dev]" --pre` to install the package and its dependencies.
+* `pytest --verbose` will run the unit-test suite. This should produce output like: 
 
 ```
 $ pytest --verbose
