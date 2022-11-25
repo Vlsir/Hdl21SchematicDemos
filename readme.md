@@ -10,8 +10,8 @@ Use this schematic --
 
 ## Installation & Usage
 
-* Get the [Poetry](https://python-poetry.org/docs/) package manager for Python.
-* `poetry install`
+* `pip install -e ".[dev]"` to install the package and its dependencies.
+  * Or get [Poetry](https://python-poetry.org/docs/) and run `poetry install`.
 * `pytest --verbose` should produce something like: 
 
 ```

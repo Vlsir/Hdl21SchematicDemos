@@ -17,23 +17,23 @@ assert isinstance(inverter, h.Generator)
 
 @h.paramclass
 class RingOscParams:
-    """ Ring Oscillator Parameters """
+    """Ring Oscillator Parameters"""
 
-    mos_params = h.Param(dtype=MosParams, desc="Xtor Params", default=MosParams())
+    mos = h.Param(dtype=MosParams, desc="Xtor Params", default=MosParams())
 
 
 @h.generator
 def RingOsc(params: RingOscParams) -> h.Module:
-    """ A three-stage ring oscillator """
+    """A three-stage ring oscillator"""
 
     @h.module
     class RingOsc:
-        VDD, VSS = h.Ports(2)
-        a, b, c, = h.Ports(3)
+        VDD, VSS = h.Inputs(2)
+        a, b, c  = h.Outputs(3)
 
         # Instantiate our 3 schematic inverters
-        ia = inverter(params.mos_params)(inp=a, out=b, VDD=VDD, VSS=VSS)
-        ib = inverter(params.mos_params)(inp=b, out=c, VDD=VDD, VSS=VSS)
-        ic = inverter(params.mos_params)(inp=c, out=a, VDD=VDD, VSS=VSS)
+        ia = inverter(params.mos)(inp=a, out=b, VDD=VDD, VSS=VSS)
+        ib = inverter(params.mos)(inp=b, out=c, VDD=VDD, VSS=VSS)
+        ic = inverter(params.mos)(inp=c, out=a, VDD=VDD, VSS=VSS)
 
     return RingOsc
