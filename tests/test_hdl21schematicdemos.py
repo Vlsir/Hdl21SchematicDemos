@@ -6,7 +6,7 @@ Unit Tests
 
 import sys
 import hdl21 as h
-import sky130
+import sky130_hdl21 as sky130
 
 # DUT Imports
 from hdl21schematicdemos import RingOsc, RingOscParams, inverter
